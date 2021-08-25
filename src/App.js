@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import SmartBoard from "./SmartBoard";
+import "react-chessground/dist/styles/chessground.css";
+import DumbBoard from "./DumbBoard";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div>
+        <h1>Smart board</h1>
+        <p>The smart board has chess rules enforced using chess.js</p>
+        <SmartBoard />
+      </div>
+      <div>
+        <h2>Dumb board</h2>
+        <p>This board doesn't use chess.js, so anything goes</p>
+        <DumbBoard />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
