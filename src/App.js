@@ -12,7 +12,7 @@ const App = () => {
         <SmartBoard />
       </div>
       <div>
-        <h2>Dumb board</h2>
+        <h1>Dumb board</h1>
         <p>This board doesn't use chess.js, so anything goes</p>
         <DumbBoard />
       </div>
